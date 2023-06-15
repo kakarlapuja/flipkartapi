@@ -3,10 +3,11 @@ let express = require("express");
 // rest objects
 let app = express();//calling express function
 let Mongo = require('mongodb');//calling mongodb
+
 const bodyParser =require('body-parser');//calling bodyparser
 const cors =require('cors')
 // port
-let port = 5001;
+let port = process.env.PORT||5001;
 
 let { dbConnect, getData,postData } = require('./controller/dbController');
 // middle ware
